@@ -103,3 +103,43 @@ function maxAverageRatio(classes: number[][], extraStudents: number): number {
 
     return heap.data.reduce((sum, [_, pass, total]) => sum + pass / total, 0) / classes.length;
 }
+
+
+
+// SOL - 2
+
+// function maxAverageRatio(classes: number[][], extraStudents: number): number {
+    
+//     while(extraStudents){
+//     let minRatioIdx = Infinity
+//     let maxDiff = 0
+    
+//     classes?.forEach((ar,idx)=>{
+//        let ratio = ar[0]/ar[1]
+//        let newRatio = (ar[0]+1)/(ar[1]+1)
+//        let diff = newRatio-ratio
+
+//        if(diff>=maxDiff){
+//         maxDiff=diff
+//         minRatioIdx = idx;
+//        }
+//     })
+//     if(extraStudents>0){
+//     classes[minRatioIdx] = [(classes[minRatioIdx][0]+1),(classes[minRatioIdx][1]+1)]
+//     extraStudents--
+//     }
+
+//     }
+
+//     return getAvgRatioOfNestedArray(classes)    
+// };
+
+
+// function getAvgRatioOfNestedArray(classes: number[][]){
+//     let ratio = 0
+//     classes.forEach((clas)=>{
+//         ratio += clas[0]/clas[1]
+//     })
+
+//     return ratio/classes.length
+// }
